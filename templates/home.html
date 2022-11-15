@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<script type="text/javascript" src="{{ url_for('static', filename = 'js/home.js') }}"></script>
+
+<h1 id="home-title">Chinese Stroke Order</h1>
+<div id="home-row" class="row d-flex align-items-center">
+    <div class="col-md-5">
+        <img src="/static/img/home_img.gif" alt="Chinese character 'Yong'" class="img-fluid">
+    </div>
+    <div class="col-md-7">
+        <p class="home-des">Knowing the stroke sequence helps you memorize 
+            characters faster and gain a better knowledge of 
+            the structure of every Chinese character you come 
+            across.</p>
+        <p class="home-des">Let's learn how to identify stroke order of 
+            simplified Chinese characters by using the six 
+            general rules in just <span id="home-intro">10 minutes</span></p>
+        <button id="home-start-btn">Start Learning</button>
+    </div>
+</div>
+
+{% endblock %}

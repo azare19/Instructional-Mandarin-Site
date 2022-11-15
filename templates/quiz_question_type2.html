@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<script type="text/javascript" src="{{ url_for('static', filename = 'js/quiz2.js') }}"></script>
+
+<div class="text-center">
+    <img id="quiz-imgs" src="/static/img/{{ data.img }}" alt="Character" class="img-fluid">
+    {% autoescape false %}
+    <h3 id="quiz-questions"> Question 3 of 3 </h3>
+    <h3 id="question-description"> {{data.text}} </h3>
+    {% endautoescape %}
+</div>
+
+<div id="quiz-lesson-row" class="row d-flex align-items-center">
+    <div class="col-md-4 text-center">
+        {% autoescape false %}
+        <div id="strokes">
+            <div id = "stroke_1" class = "stroke"> <img id="stroke1-imgs" class = "stroke-img" src="/static/img/{{ data.stroke_image_1 }}" alt="Stroke" class="img-fluid"> </div>
+            <div id = "stroke_2" class = "stroke" > <img id="stroke2-imgs" class = "stroke-img" src="/static/img/{{ data.stroke_image_2 }}" alt="Stroke" class="img-fluid"> </div>
+            <div id = "stroke_3" class = "stroke" > <img id="stroke3-imgs" class = "stroke-img" src="/static/img/{{ data.stroke_image_3 }}" alt="Stroke" class="img-fluid"> </div>
+        </div>
+        {% endautoescape %}
+    </div>
+    <div class="col-md-4 text-center">
+        {% autoescape false %}
+        <div id= "answers-list-title"></div>
+        <div id="answers">
+            <div id = "position1" class = "answer-field" > Stroke 1</div>
+            <div id = "position2" class = "answer-field" > Stroke 2</div>
+            <div id = "position3" class = "answer-field" > Stroke 3</div>
+            <div id = "position4" class = "answer-field" > Stroke 4</div>
+            <div id = "position5" class = "answer-field" > Stroke 5</div>
+            <div id = "position6" class = "answer-field" > Stroke 6</div>
+        </div>
+        {% endautoescape %}
+    </div>
+    <div class="col-md-4 text-center">
+        {% autoescape false %}
+        <div id="strokes">
+            <div id = "stroke_4" class = "stroke" > <img id="stroke4-imgs" class = "stroke-img" src="/static/img/{{ data.stroke_image_4 }}" alt="Stroke" class="img-fluid"> </div>
+            <div id = "stroke_5" class = "stroke" > <img id="stroke5-imgs" class = "stroke-img" src="/static/img/{{ data.stroke_image_5 }}" alt="Stroke" class="img-fluid"> </div>
+            <div id = "stroke_6" class = "stroke" > <img id="stroke6-imgs" class = "stroke-img" src="/static/img/{{ data.stroke_image_6 }}" alt="Stroke" class="img-fluid"> </div>
+        </div>
+        {% endautoescape %}
+    </div>
+</div>
+<button id = "reset-btn"> <img id="reset-img" src="/static/img/reset_quiz.png" alt="Reset" class="img-fluid"> </button>
+<button id="quiz-next-btn" data-current-id="3">Next</button>
+
+{% endblock %}

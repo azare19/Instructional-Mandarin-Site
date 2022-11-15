@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<script type="text/javascript" src="{{ url_for('static', filename = 'js/learn.js') }}"></script>
+
+<img id="congrat" src="/static/img/congrat.jpg" class="mx-auto d-block">
+
+<h2 id="congrat-text">You have completed the tutorials!</h2>
+
+<p id="congrat-des">Want to know if you have mastered the materials? 
+    You can take a quiz by clicking “Next” or “Quiz” 
+    in the menu bar. You can also continue practicing 
+    by either clicking a tutorial from the submenu 
+    under “Learn” in the menu bar or click “Practice” 
+    to restart the tutorials.</p>
+
+<div id="congrat-btn-group" class="row d-flex justify-content-center text-center">
+    <div class="col-md-6">
+        <button id="learn-end-practice-btn">Practice</button>
+    </div>
+    <div class="col-md-6">
+        <button id="learn-end-next-btn">Next</button>
+    </div>
+</div>
+
+{% endblock %}
